@@ -19,6 +19,12 @@ namespace Slight.Alexa.Framework.Models.Requests
         public Session Session { get; set; }
 
         /// <summary>
+        /// The locale object lets us know what language / region corresponds to the input
+        /// </summary>
+        [JsonProperty("locale")]
+        public string Locale { get; set; }
+
+        /// <summary>
         /// An object that is composed of associated parameters that further describes the user’s request. 
         /// </summary>
         [JsonProperty("request")]
