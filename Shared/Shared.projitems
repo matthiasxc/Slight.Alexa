@@ -8,6 +8,9 @@
   <PropertyGroup Label="Configuration" />
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Application.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\AudioPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Device.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Intent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\IIntentRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\ILaunchRequest.cs" />
@@ -17,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Session.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\SkillRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Slot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\System.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Responses\ICard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Responses\IOutputSpeech.cs" />
@@ -30,5 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Responses\SsmlOutputSpeech.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Types\BuiltInIntent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Types\BuiltInSlotType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Types\PlayerActivity.cs" />
   </ItemGroup>
 </Project>

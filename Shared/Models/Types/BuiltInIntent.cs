@@ -42,6 +42,7 @@ namespace Slight.Alexa.Framework.Models.Types
         /// Audio Intents
         /// - These intents are for use with a skill that plays audio
         /// </summary>
+        /// 
 
         /// <summary>
         /// Purpose: 
