@@ -11,12 +11,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\AudioPlayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Device.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Errors\Cause.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Errors\CurrentPlaybackState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Errors\Error.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Intent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\IAudioError.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\IAudioRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\IIntentRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\ILaunchRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\IRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\ISessionEndedRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\ISystemError.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\RequestTypes\RequestBundle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\Session.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Requests\SkillRequest.cs" />
@@ -40,8 +45,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Responses\SimpleCard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Responses\SkillResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Responses\SsmlOutputSpeech.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Types\AudioError.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Types\BuiltInIntent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Types\BuiltInSlotType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Types\ClearBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Types\PlayBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Types\PlayerActivity.cs" />
   </ItemGroup>
 </Project>

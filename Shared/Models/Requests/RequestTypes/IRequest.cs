@@ -22,5 +22,7 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
         /// ISO 8601 formatted string (for example, 2015-05-13T12:34:56Z).
         /// </summary>
         DateTime Timestamp { get; set; }
+
+        string Locale { get; set; }
     }
 }

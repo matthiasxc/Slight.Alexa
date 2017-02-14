@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models.Types
+namespace Slight.Alexa.Framework.Models.Types
 {
     public class PlayerActivity
     {

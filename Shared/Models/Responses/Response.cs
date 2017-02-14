@@ -46,8 +46,7 @@ namespace Slight.Alexa.Framework.Models.Responses
         [JsonProperty("directives", NullValueHandling = NullValueHandling.Ignore)]
         public List<IDirective> Directives { get; set; }
 
-
-        }
+    }
 }
 
 //{

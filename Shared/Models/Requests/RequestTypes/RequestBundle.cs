@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
+using Slight.Alexa.Framework.Models.Requests.Errors;
 using System;
 
 namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
 {
-    public class RequestBundle : IIntentRequest, ILaunchRequest, ISessionEndedRequest
+    public class RequestBundle : IIntentRequest, ILaunchRequest, ISessionEndedRequest, IAudioRequest, IAudioError, ISystemError
     {
         /// <summary>
         /// Describes the request type with the value as:
@@ -28,6 +29,13 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
         public DateTime Timestamp { get; set; }
 
         /// <summary>
+        /// Provides the language-region information that we'll need if we 
+        /// are going to localize our skill
+        /// </summary>
+        [JsonProperty("locale")]
+        public string Locale { get; set; }
+
+        /// <summary>
         /// An object that represents what the user wants.
         /// </summary>
         [JsonProperty("intent")]
@@ -45,15 +53,38 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
         [JsonProperty("reason")]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// audio token
+        /// </summary>
+        [JsonProperty("token")]
+        public string Token { get; set; }
+
+        /// <summary>
+        /// audio offset
+        /// </summary>
+        [JsonProperty("offsetInMilliseconds")]
+        public long OffsetInMilliseconds { get; set; }
+
+        /// <summary>
+        /// audio error
+        /// </summary>
+        [JsonProperty("error")]
+        public Error Error { get; set; }
+
+        /// <summary>
+        /// current playback state
+        /// </summary>
+        [JsonProperty("currentPlaybackState")]
+        public CurrentPlaybackState CurrentPlaybackState { get; set; }
+
+        /// <summary>
+        /// current playback state
+        /// </summary>
+        [JsonProperty("cause")]
+        public Cause Cause{ get; set; }
+
         public Type GetRequestType()
         {
-            // note: need to update with with the relevent audio requests
-            //  AudioPlayer.PlaybackStarted
-            //  AudioPlayer.PlaybackFinished 
-            //  AudioPlayer.PlaybackStopped 
-            //  AudioPlayer.PlaybackNearlyFinished
-            //  AudioPlayer.PlaybackFailed
-
             switch (Type)
             {
                 case "IntentRequest":
@@ -62,6 +93,18 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
                     return typeof(ILaunchRequest);
                 case "SessionEndedRequest":
                     return typeof(ISessionEndedRequest);
+                case "AudioPlayer.PlaybackStarted":
+                    return typeof(IAudioRequest);
+                case "AudioPlayer.PlaybackFinished":
+                    return typeof(IAudioRequest);
+                case "AudioPlayer.PlaybackStopped":
+                    return typeof(IAudioRequest);
+                case "AudioPlayer.PlaybackNearlyFinished":
+                    return typeof(IAudioRequest);
+                case "AudioPlayer.PlaybackFailed":
+                    return typeof(IAudioError);
+                case "System.ExceptionEncountered":
+                    return typeof(ISystemError);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(Type), $"Unknown request type: {Type}.");
             }

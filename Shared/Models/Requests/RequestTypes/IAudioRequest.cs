@@ -6,6 +6,9 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
 {
     public interface IAudioRequest : IRequest
     {
+        string Token { get; set; }
+        long OffsetInMilliseconds { get; set; }
+
     }
     //https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/custom-audioplayer-interface-reference#playbacknearlyfinished
 
@@ -49,41 +52,7 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
     //    "locale": "string"
     //  }
 
-    //  AudioPlayer.PlaybackFailed
-    //  {
-    //    "type": "AudioPlayer.PlaybackFailed",
-    //    "requestId": "string",
-    //    "timestamp": "string",
-    //    "token": "string",
-    //    "locale": "string",
-    //    "error": {
-    //      "type": "string",
-    //      "message": "string"
-    //    },
-    //    "currentPlaybackState": {
-    //      "token": "string",
-    //      "offsetInMilliseconds": 0,
-    //      "playerActivity": "string"
-    //    }
-    //  }
-
-    // System.ExceptionEncounteredRequest
-    //  {
-    //    "type": "AudioPlayer.PlaybackFailed",
-    //    "requestId": "string",
-    //    "timestamp": "string",
-    //    "token": "string",
-    //    "locale": "string",
-    //    "error": {
-    //      "type": "string",
-    //      "message": "string"
-    //    },
-    //    "currentPlaybackState": {
-    //      "token": "string",
-    //      "offsetInMilliseconds": 0,
-    //      "playerActivity": "string"
-    //    }
-    //  }
+    
 
 
 }
