@@ -47,6 +47,13 @@ namespace Slight.Alexa.Framework.Models.Requests.RequestTypes
 
         public Type GetRequestType()
         {
+            // note: need to update with with the relevent audio requests
+            //  AudioPlayer.PlaybackStarted
+            //  AudioPlayer.PlaybackFinished 
+            //  AudioPlayer.PlaybackStopped 
+            //  AudioPlayer.PlaybackNearlyFinished
+            //  AudioPlayer.PlaybackFailed
+
             switch (Type)
             {
                 case "IntentRequest":

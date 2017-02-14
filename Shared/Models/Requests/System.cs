@@ -23,6 +23,7 @@ namespace Slight.Alexa.Framework.Models.Requests
         /// </summary>
         [JsonProperty("device")]
         public Device Device { get; set; }
+        
 
 
 

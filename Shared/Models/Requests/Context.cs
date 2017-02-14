@@ -24,9 +24,5 @@ namespace Slight.Alexa.Framework.Models.Requests
         [JsonProperty("AudioPlayer")]
         public AudioPlayer AudioPlayer { get; set; }
 
-
-
-
-
     }
 }

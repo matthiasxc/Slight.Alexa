@@ -17,5 +17,12 @@ namespace Slight.Alexa.Framework.Models.Requests
         [JsonProperty("supportedInterfaces")]
         public Dictionary<string, object> SupportedInterfaces { get; set; }
 
+        public bool IsAudioPlayer()
+        {            
+            if (this.SupportedInterfaces != null && this.SupportedInterfaces.ContainsKey("AudioPlayer"))
+                return true;
+            return false;
+        }
+
     }
 }

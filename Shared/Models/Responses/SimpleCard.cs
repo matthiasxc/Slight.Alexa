@@ -31,5 +31,23 @@ namespace Slight.Alexa.Framework.Models.Responses
         /// </summary>
         [JsonProperty("content", NullValueHandling = NullValueHandling.Ignore)]
         public string Content { get; set; }
+
+        /// <summary>
+        /// A string containing the text of the card.
+        /// 
+        /// Note that you can include line breaks in the content for a card of type "Simple". 
+        /// Use either “\r\n” or “\n” within the text of the card to insert line breaks.
+        /// </summary>
+        [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
+        public string Text { get; set; }
+
+        /// <summary>
+        /// A string containing the text of the card.
+        /// 
+        /// Note that you can include line breaks in the content for a card of type "Simple". 
+        /// Use either “\r\n” or “\n” within the text of the card to insert line breaks.
+        /// </summary>
+        [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
+        public Image Image { get; set; }
     }
 }
